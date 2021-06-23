@@ -1,0 +1,28 @@
+body {
+    background-color: orange;
+}
+#general-container{
+    border: 3px black solid;
+    height: 400px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+}
+.utility-buttons {
+    border: 1px dotted blue;
+    height: 100px;
+    width: 150px;
+}
+.grid-container {
+    border: 1px dotted blue;
+    margin: 3px;
+    height: 100px;
+    width: 250px;
+}
+.color-buttons {
+    border: 1px dotted blue;
+    height: 100px;
+    width: 150px;
+}
