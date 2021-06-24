@@ -1,28 +1,50 @@
 body {
-    background-color: orange;
+    background-color: white;
 }
 #general-container{
-    border: 3px black solid;
-    height: 400px;
-    width: 600px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-   
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    border: 3px black solid;
+    height: 500px;
+    width: 1000px;
 }
 .utility-buttons {
-    border: 1px dotted blue;
-    height: 100px;
+    display: flex;
+    border: 1px solid blue;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
     width: 150px;
 }
+.background-button, .eraser-button, .clear-button {
+    height: 50px;
+    font-size: 14px;
+    border: 0.5px solid red;
+    border-radius: 7%;
+}
+
 .grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
     border: 1px dotted blue;
-    margin: 3px;
-    height: 100px;
-    width: 250px;
+    height: 500px;
+    width: 500px;
 }
 .color-buttons {
-    border: 1px dotted blue;
-    height: 100px;
+    display: flex;
+    border: 1px solid blue;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
     width: 150px;
+}
+.black-button, .rainbow-button, .select-color {
+    height: 50px;
+    font-size: 14px;
+    border: 0.5px solid red;
+    border-radius: 7%;
 }
