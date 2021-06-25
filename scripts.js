@@ -1,12 +1,26 @@
 const utilityButtons = document.createElement('div');
     utilityButtons.setAttribute('class', 'utility-buttons');
+function clearGrid() {
+        while(gridContainer.hasChildNodes()) {
+            gridContainer.removeChild(gridContainer.lastChild);
+        }
+    }
+    
 let generalContainer = document.getElementById('general-container');
     generalContainer.appendChild(utilityButtons);
 const backgroundButton = document.createElement('button');
     backgroundButton.setAttribute('class', 'background-button');
+    let pickColor = document.createElement('input');
+    pickColor.setAttribute('type', 'color');
+    pickColor.setAttribute('value', '#FFFFFF');
+    backgroundButton.appendChild(pickColor);
     const button1 = document.createTextNode('Change Background');
     backgroundButton.appendChild(button1);
     utilityButtons.appendChild(backgroundButton);
+    backgroundButton.addEventListener('click', changeBackground);
+    function changeBackground() {
+        gridContainer.style.backgroundColor = pickColor.value;
+    }
 const eraserButton = document.createElement('button');
     eraserButton.setAttribute('class', 'eraser-button');
     eraserButton.setAttribute('onclick', 'eraseFunction()');
@@ -34,7 +48,6 @@ function createGrid(num) {
         gridContainer.appendChild(grids);
     }
 }
-createGrid(16);
 const colorButtons = document.createElement('div');
     colorButtons.setAttribute('class', 'color-buttons');
     generalContainer.appendChild(colorButtons);
@@ -55,12 +68,21 @@ const selectColor = document.createElement('button');
     colorButtons.appendChild(selectColor);
 function pixelFunction() {
     let size = Number(prompt('Choose Your Grid Size (1-100):'));
-    if (size == null || size == 0) {
-        createGrid(16);
-    } else if (size < 0 || size > 100) {
+    if (size == null ) {
+      return  createGrid(16);
+    } else if (size < 1 || size > 100 || Number.isNaN(size)) {
        let correctSize= prompt('Kindly Input A Number Between 1-100');
-        createGrid(correctSize);
+       if (correctSize == null || correctSize == undefined || 
+        correctSize > 100 || correctSize < 1) {
+            clearGrid();
+            return createGrid(16);
+        } else {
+            clearGrid();
+            return createGrid(correctSize);
+        }
     } else {
-        createGrid(size);
+        clearGrid();
+       return createGrid(size);
     }
 }
+createGrid(16);

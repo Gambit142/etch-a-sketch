@@ -20,19 +20,23 @@ body {
     width: 150px;
 }
 .background-button, .eraser-button, .clear-button {
-    height: 50px;
+    height: 40px;
     font-size: 14px;
     border: 0.5px solid red;
     border-radius: 7%;
+    cursor: pointer;
 }
-
+:root {
+    --cols: 1;
+    --rows: 1;
+}
 .grid-container {
+    height: 500px;
+    width: 500px;
     display: grid;
     grid-template-columns: repeat(var(--cols), 1fr);
     grid-template-rows: repeat(var(--rows), 1fr);
     border: 1px dotted blue;
-    height: 500px;
-    width: 500px;
 }
 .color-buttons {
     display: flex;
@@ -43,8 +47,26 @@ body {
     width: 150px;
 }
 .black-button, .rainbow-button, .select-color {
-    height: 50px;
+    height: 40px;
     font-size: 14px;
     border: 0.5px solid red;
     border-radius: 7%;
+    cursor: pointer;
+}
+#header {
+    text-align: center;
+}
+#pixel {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.pixel-size {
+    height: 40px;
+    font-size: 14px;
+    border: 0.5px solid red;
+    border-radius: 7%;
+    cursor: pointer;
+}
+.background-button{
+    font-size: 13px;
 }
