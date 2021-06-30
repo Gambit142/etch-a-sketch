@@ -41,7 +41,7 @@ const clearButton = document.createElement('button');
     clearButton.appendChild(button3);
     clearButton.setAttribute('onclick', 'clearFunction()');
     function clearFunction() {
-        gridContainer.style.backgroundColor = 'white';
+        gridContainer.style.backgroundColor = pixel.value;
         clearGrid();
         createGrid(16);
     }
@@ -54,7 +54,7 @@ function createGrid(num) {
     for (let i = 0; i < Math.pow(num, 2); i++) {
         let grids = document.createElement('div');
         grids.setAttribute('class', 'grid-items');
-        grids.style.border = '0.5px solid grey';
+        grids.style.border = '0.1px dashed rgb(187, 183, 252)';
         gridContainer.appendChild(grids);
     }
 }
@@ -93,7 +93,7 @@ const rainbowButton = document.createElement('button');
     colorButtons.appendChild(rainbowButton);
 const selectColor = document.createElement('button');
     selectColor.setAttribute('class', 'select-color')
-    const button6 = document.createTextNode('Select Color:');
+    const button6 = document.createTextNode('Select Color');
     selectColor.appendChild(button6);
     let chooseColor = document.createElement('input');
     chooseColor.setAttribute('type', 'color');

@@ -1,5 +1,13 @@
 body {
-    background-color: white;
+    background-color: rgb(187, 184, 184);
+}
+.title {
+    font-family: "Akaya Kanadaka", monospace;
+    font-size: 32px;
+    word-spacing: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color:rgb(8, 3, 90);
 }
 #general-container{
     display: flex;
@@ -7,23 +15,23 @@ body {
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    border: 3px black solid;
-    height: 500px;
+    height: 450px;
     width: 1000px;
 }
 .utility-buttons {
     display: flex;
-    border: 1px solid blue;
     flex-direction: column;
     justify-content: space-evenly;
     height: 300px;
     width: 150px;
 }
 .background-button, .eraser-button, .clear-button {
+    background-color: rgb(249 220 220);
     height: 40px;
-    font-size: 14px;
-    border: 0.5px solid red;
-    border-radius: 7%;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 20px;
+    border: 5px solid rgb(8, 3, 90);
+    border-radius: 10%;
     cursor: pointer;
 }
 :root {
@@ -36,21 +44,23 @@ body {
     display: grid;
     grid-template-columns: repeat(var(--cols), 1fr);
     grid-template-rows: repeat(var(--rows), 1fr);
-    border: 1px dotted blue;
+    border: 15px black solid;
+    background-color: white;
 }
 .color-buttons {
     display: flex;
-    border: 1px solid blue;
     flex-direction: column;
     justify-content: space-evenly;
     height: 300px;
     width: 150px;
 }
 .black-button, .rainbow-button, .select-color {
+    background-color: rgb(249 220 220);
     height: 40px;
-    font-size: 14px;
-    border: 0.5px solid red;
-    border-radius: 7%;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 20px;
+    border: 5px solid rgb(8, 3, 90);
+    border-radius: 10%;
     cursor: pointer;
 }
 #header {
@@ -58,15 +68,39 @@ body {
 }
 #pixel {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 .pixel-size {
+    background-color: rgb(249 220 220);
     height: 40px;
-    font-size: 14px;
-    border: 0.5px solid red;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 20px;
+    border: 5px solid rgb(8, 3, 90);
     border-radius: 7%;
     cursor: pointer;
 }
 .background-button{
-    font-size: 13px;
+    height: 45px;
+    word-wrap: break-word;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+}
+.select-color{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+}
+.background-button input[type=color], .select-color input[type=color] {
+   width: 25px;
+   border: black 1.5px solid;
+   background-color: rgb(249 220 220);
+}
+button:hover {
+    background-color: rgb(250, 151, 151);
 }
